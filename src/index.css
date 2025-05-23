@@ -62,3 +62,43 @@
     color: var(--color-text-primary);
 
 }
+
+.shopfloor-label {
+    font-size: 1vw;
+    padding:  0.35vw;
+    border-radius: 0.25rem;
+    background: var(--color-panel);
+    border: 1px solid var(--color-info);
+    color: var(--color-text-secondary);
+}
+
+.shopfloor-legend {
+    display: flex;
+    bottom: 0;
+    li {
+        display: flex;
+        align-items: center;
+        margin: 0rem 2rem;
+        .legend {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            display: inline-block;
+            &:after {
+                content: ' ';
+                margin-right: 0.5rem;
+            }
+
+            &.success {
+                background-color: var(--color-safe);
+            }
+            &.error {
+                background-color: var(--color-error);
+            }
+            &.idle {
+                background-color: var(--color-gray-700);
+            }
+
+        }
+    }
+}

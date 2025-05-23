@@ -8,7 +8,6 @@ import {MdBrokenImage, MdCompare} from "react-icons/md";
 import {FaPeopleRoof} from "react-icons/fa6";
 import {TiWarning} from "react-icons/ti";
 import {RiDeleteBin3Fill} from "react-icons/ri";
-import {FaThermometer} from "react-icons/fa";
 
 
 const DashboardLayout = () => {
@@ -24,7 +23,7 @@ const DashboardLayout = () => {
         {url: '/machine-status', title: "Machine Status",  icon: TiWarning},
         {url: '/throughput', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
         {url: '/', title: "Runtime & Downtime", icon: GiFactory},
-        {url: '/environment', title: "Environmental Condition",  icon: FaThermometer},
+        {url: '/shopfloor', title: "Shopfloor",  icon: GiFactory},
         {url: '/labour', title: "Labor Utilization",  icon: FaPeopleRoof},
     ]);
 

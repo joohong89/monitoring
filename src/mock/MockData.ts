@@ -65,3 +65,45 @@ export const defectsByMachinesMockData = [
         series1: 3,
     },
 ];
+export const shopfloorMachineStatus = [
+    {
+        name: 'Dehumidifier',
+        status: 1,
+        top: 27, left: 6.5
+    },
+    {
+        name: 'Injection Moulding',
+        status: 1,
+        top: 27, left:26.5
+    },
+    {
+        name: 'Mould Cooling',
+        status: 1,
+        top:28, left:56.5
+    },
+    {
+        name: 'Manual Trimming',
+        status: 1,
+        top: 28, left:77
+    },
+    {
+        name: 'Plasma Treater',
+        status: -1,
+        top: 68, left: 77.5
+    },
+    {
+        name: 'Ultrasonic Welder',
+        status: 0,
+        top: 68, left:54
+    },
+    {
+        name: 'Inspection',
+        status: 0,
+        top: 68, left:31
+    },
+    {
+        name: 'Assembly',
+        status: 0,
+        top: 68, left: 9
+    },
+];
