@@ -17,15 +17,15 @@ const DashboardLayout = () => {
     const location = useLocation();
 
     const [menuItems] = useState([
-        {url: '/', title: "Runtime & Downtime", icon: GiFactory},
         {url: '/cycle', title: "Cycle Time Analysis",  icon: GiBackwardTime},
-        {url: '/', title: "OEE",  icon: GrVirtualMachine},
-        {url: '/', title: "Target vs Actual",  icon: MdCompare},
-        {url: '/', title: "Efficiency & Reject Rate",  icon: FaBoxesPacking},
-        {url: '/', title: "Machine Status",  icon: TiWarning},
-        {url: '/', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
-        {url: '/', title: "Environmental Condition",  icon: FaThermometer},
-        {url: '/', title: "Labor Utilization",  icon: FaPeopleRoof},
+        {url: '/oee', title: "OEE",  icon: GrVirtualMachine},
+        {url: '/target', title: "Target vs Actual",  icon: MdCompare},
+        {url: '/defects', title: "Defects & Issues",  icon: FaBoxesPacking},
+        {url: '/run-downtime', title: "Runtime & Downtime", icon: GiFactory},
+        {url: '/machine-status', title: "Machine Status",  icon: TiWarning},
+        {url: '/throughput', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
+        {url: '/environment', title: "Environmental Condition",  icon: FaThermometer},
+        {url: '/labour', title: "Labor Utilization",  icon: FaPeopleRoof},
     ]);
 
     useEffect(()=> {
