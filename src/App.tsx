@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashboardLayout from "./layouts/DashboardLayout.tsx";
 import ProductionAndDowntimeL1 from "./modules/ProductionAndDowntime/ProductionAndDowntimeL1.tsx";
+import DefectsByMachines from "./modules/ProductionAndDowntime/DefectsByMachines.tsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
                 <Route path="/" element={<DashboardLayout />}>
                     <Route index element={<ProductionAndDowntimeL1 />} />
                     <Route path="cycle" element={<ProductionAndDowntimeL1 />} />
+                    <Route path="defects" element={<DefectsByMachines />} />
                     {/*<Route path="reports" element={<Reports />} />*/}
                 </Route>
             </Routes>

@@ -14,7 +14,7 @@ const ProductionAndDowntimeL1 = () => {
 
     return (
         <div className={"panel"}>
-            <CustomBarChart data={data} seriesName={seriesName}></CustomBarChart>
+            <CustomBarChart data={data} seriesName={seriesName} yAxisLabel="Time (min)"></CustomBarChart>
         </div>
     );
 };

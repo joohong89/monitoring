@@ -4,8 +4,8 @@ import {useEffect, useState} from "react";
 import { useLocation } from 'react-router-dom';
 import {GiBackwardTime, GiFactory} from "react-icons/gi";
 import {GrVirtualMachine} from "react-icons/gr";
-import {MdCompare} from "react-icons/md";
-import {FaBoxesPacking, FaPeopleRoof} from "react-icons/fa6";
+import {MdBrokenImage, MdCompare} from "react-icons/md";
+import {FaPeopleRoof} from "react-icons/fa6";
 import {TiWarning} from "react-icons/ti";
 import {RiDeleteBin3Fill} from "react-icons/ri";
 import {FaThermometer} from "react-icons/fa";
@@ -20,10 +20,10 @@ const DashboardLayout = () => {
         {url: '/cycle', title: "Cycle Time Analysis",  icon: GiBackwardTime},
         {url: '/oee', title: "OEE",  icon: GrVirtualMachine},
         {url: '/target', title: "Target vs Actual",  icon: MdCompare},
-        {url: '/defects', title: "Defects & Issues",  icon: FaBoxesPacking},
-        {url: '/run-downtime', title: "Runtime & Downtime", icon: GiFactory},
+        {url: '/defects', title: "Defects & Issues",  icon: MdBrokenImage },
         {url: '/machine-status', title: "Machine Status",  icon: TiWarning},
         {url: '/throughput', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
+        {url: '/', title: "Runtime & Downtime", icon: GiFactory},
         {url: '/environment', title: "Environmental Condition",  icon: FaThermometer},
         {url: '/labour', title: "Labor Utilization",  icon: FaPeopleRoof},
     ]);

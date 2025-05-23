@@ -35,3 +35,33 @@ export const runAndDowntimeMockData = [
         series2: 4300,
     },
 ];
+export const defectsByMachinesMockData = [
+    {
+        name: 'Material Issues',
+        series1: 120,
+    },
+    {
+        name: 'Machine Speed Error',
+        series1: 110,
+    },
+    {
+        name: 'Worn Machine',
+        series1: 65,
+    },
+    {
+        name: 'Overheating',
+        series1: 33,
+    },
+    {
+        name: 'Downstream',
+        series1: 21,
+    },
+    {
+        name: 'Measurement Error',
+        series1: 12,
+    },
+    {
+        name: 'Wrong Settings',
+        series1: 3,
+    },
+];

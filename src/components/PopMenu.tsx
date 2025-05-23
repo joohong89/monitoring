@@ -32,10 +32,13 @@ const PopMenu = ({updateTitle, menuItems} :{updateTitle: UpdateTitle, menuItems:
                                 <nav className="h-full grid grid-cols-3 grid-rows-3 pop-menu">
                                     {
                                         menuItems && menuItems.map((item, index) =>
-                                            <div className={"pop-menu-items"} key={index}  onClick={() => updateTitle(item.title)}>
+                                            <Link to={item.url} className={"pop-menu-items"} key={index}
+                                                 onClick={() => {
+                                                    updateTitle(item.title)
+                                                 }}>
                                                 <item.icon className={"pop-menu-icons"}  />
-                                                <Link to={item.url}>{item.title}</Link>
-                                            </div>)
+                                                {item.title}
+                                            </Link>)
                                     }
                                 </nav>
                             </div>
