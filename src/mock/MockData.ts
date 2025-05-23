@@ -69,41 +69,41 @@ export const shopfloorMachineStatus = [
     {
         name: 'Dehumidifier',
         status: 1,
-        top: 27, left: 6.5
+        top: 35, left: 10
     },
     {
         name: 'Injection Moulding',
         status: 1,
-        top: 27, left:26.5
+        top: 35, left:32.5
     },
     {
         name: 'Mould Cooling',
         status: 1,
-        top:28, left:56.5
+        top:38, left:58
     },
     {
         name: 'Manual Trimming',
         status: 1,
-        top: 28, left:77
+        top: 10, left:79
     },
     {
         name: 'Plasma Treater',
         status: -1,
-        top: 68, left: 77.5
+        top:76, left: 80.5
     },
     {
         name: 'Ultrasonic Welder',
         status: 0,
-        top: 68, left:54
+        top: 76, left:58.5
     },
     {
         name: 'Inspection',
         status: 0,
-        top: 68, left:31
+        top: 74, left:39
     },
     {
         name: 'Assembly',
         status: 0,
-        top: 68, left: 9
+        top: 76, left: 15
     },
 ];
