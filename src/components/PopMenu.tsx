@@ -1,16 +1,14 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import {CgMenuGridR} from "react-icons/cg";
-import {GiBackwardTime, GiFactory} from "react-icons/gi";
-import {GrVirtualMachine} from "react-icons/gr";
-import {MdCompare} from "react-icons/md";
-import {FaBoxesPacking, FaPeopleRoof} from "react-icons/fa6";
-import {TiWarning} from "react-icons/ti";
-import {RiDeleteBin3Fill} from "react-icons/ri";
-import {FaThermometer} from "react-icons/fa";
+import type {IconType} from "react-icons";
 
-const PopMenu = () => {
+type UpdateTitle = (string: string) => void;
+type MenuItem = {url: string, title: string, icon: IconType};
+
+const PopMenu = ({updateTitle, menuItems} :{updateTitle: UpdateTitle, menuItems: MenuItem[]}) => {
     const [showModal, setShowModal] = useState(false);
+
 
     return (
         <>
@@ -32,47 +30,18 @@ const PopMenu = () => {
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full h-full bg-panel outline-none focus:outline-none">
                                 {/*body*/}
                                 <nav className="h-full grid grid-cols-3 grid-rows-3 pop-menu">
-                                    <div className={"pop-menu-items"}>
-                                        <GiFactory className={"pop-menu-icons"}  />
-                                        <Link to="/">Production & Downtime</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <GiBackwardTime className={"pop-menu-icons"} />
-                                        <Link to="/">Cycle Time Analysis</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <GrVirtualMachine className={"pop-menu-icons"} />
-                                        <Link to="/">OEE</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <MdCompare className={"pop-menu-icons"} />
-                                        <Link to="/">Target vs Actual</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <FaBoxesPacking className={"pop-menu-icons"} />
-                                        <Link to="/">Efficiency & Reject Rate</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <TiWarning className={"pop-menu-icons"} />
-                                        <Link to="/">Machine Status</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <RiDeleteBin3Fill className={"pop-menu-icons"} />
-                                        <Link to="/">Throughput & Scrap</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <FaThermometer className={"pop-menu-icons"} />
-                                        <Link to="/">Environmental Condition</Link>
-                                    </div>
-                                    <div className={"pop-menu-items"}>
-                                        <FaPeopleRoof className={"pop-menu-icons"} />
-                                        <Link to="/">Labor Utilization</Link>
-                                    </div>
+                                    {
+                                        menuItems && menuItems.map((item, index) =>
+                                            <div className={"pop-menu-items"} key={index}  onClick={() => updateTitle(item.title)}>
+                                                <item.icon className={"pop-menu-icons"}  />
+                                                <Link to={item.url}>{item.title}</Link>
+                                            </div>)
+                                    }
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                    <div className="opacity-85 fixed inset-0 z-40 bg-black"></div>
                 </>
             ) : null}
         </>

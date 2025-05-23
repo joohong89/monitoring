@@ -11,6 +11,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<DashboardLayout />}>
                     <Route index element={<ProductionAndDowntimeL1 />} />
+                    <Route path="cycle" element={<ProductionAndDowntimeL1 />} />
                     {/*<Route path="reports" element={<Reports />} />*/}
                 </Route>
             </Routes>
