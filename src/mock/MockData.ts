@@ -107,3 +107,56 @@ export const shopfloorMachineStatus = [
         top: 76, left: 15
     },
 ];
+
+export const actualVsOutputMockData = [
+    {
+        name: '08:00',
+        actual: 3000,
+        target: 3100,
+    },
+    {
+        name: '09:00',
+        actual: 2800,
+        target: 2900,
+    },
+    {
+        name: '10:00',
+        actual: 2700,
+        target: 2500,
+    },
+    {
+        name: '11:00',
+        actual: 2000,
+        target: 1800,
+    },
+    {
+        name: '12:00',
+        actual: 0,
+        target: 0,
+    },
+    {
+        name: '13:00',
+        actual: 1800,
+        target: 600,
+    },
+    {
+        name: '14:00',
+        actual: 2300,
+        target: 3000,
+    },
+    {
+        name: '15:00',
+        actual: 1800,
+        target: 3000,
+    },
+    {
+        name: '`16:00',
+        actual: 2000,
+        target: 2500,
+    },
+    {
+        name: '17:00',
+        actual: 1000,
+        target: 2500,
+    }
+];

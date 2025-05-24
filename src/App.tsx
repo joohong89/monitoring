@@ -4,6 +4,7 @@ import DashboardLayout from "./layouts/DashboardLayout.tsx";
 import ProductionAndDowntimeL1 from "./modules/ProductionAndDowntime/ProductionAndDowntimeL1.tsx";
 import DefectsByMachines from "./modules/ProductionAndDowntime/DefectsByMachines.tsx";
 import ShopfloorOverview from "./modules/ProductionAndDowntime/ShopfloorOverview.tsx";
+import PlanVsActualOutput from "./modules/ProductionAndDowntime/PlanVsActualOutput.tsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                     <Route path="cycle" element={<ProductionAndDowntimeL1 />} />
                     <Route path="defects" element={<DefectsByMachines />} />
                     <Route path="shopfloor" element={<ShopfloorOverview />} />
+                    <Route path="plan-vs-actual" element={<PlanVsActualOutput />} />
                     {/*<Route path="reports" element={<Reports />} />*/}
                 </Route>
             </Routes>

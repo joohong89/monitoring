@@ -18,10 +18,10 @@ const DashboardLayout = () => {
     const [menuItems] = useState([
         {url: '/cycle', title: "Cycle Time Analysis",  icon: GiBackwardTime},
         {url: '/oee', title: "OEE",  icon: GrVirtualMachine},
-        {url: '/target', title: "Target vs Actual",  icon: MdCompare},
+        {url: '/throughput', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
         {url: '/defects', title: "Defects & Issues",  icon: MdBrokenImage },
         {url: '/machine-status', title: "Machine Status",  icon: TiWarning},
-        {url: '/throughput', title: "Throughput & Scrap",  icon: RiDeleteBin3Fill},
+        {url: '/plan-vs-actual', title: "Target vs Actual",  icon: MdCompare},
         {url: '/', title: "Runtime & Downtime", icon: GiFactory},
         {url: '/shopfloor', title: "Shopfloor",  icon: GiFactory},
         {url: '/labour', title: "Labor Utilization",  icon: FaPeopleRoof},
@@ -34,7 +34,7 @@ const DashboardLayout = () => {
         if(menuitem) {
             setTitle(menuitem.title);
         }
-    }, [])
+    })
 
     const updateTitle = (newTitle: string) => {
         setTitle(newTitle);
